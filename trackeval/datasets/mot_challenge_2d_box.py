@@ -164,6 +164,7 @@ class MotChallenge2DBox(_BaseDataset):
                     seq = row[0]
                     seq_list.append(seq)
                     ini_file = os.path.join(self.gt_fol, seq, 'seqinfo.ini')
+                    print('ini_file: ', ini_file)
                     if not os.path.isfile(ini_file):
                         raise TrackEvalException('ini file does not exist: ' + seq + '/' + os.path.basename(ini_file))
                     ini_data = configparser.ConfigParser()
